@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* { 
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: .3s;
+    text-decoration: none;
+    list-style: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: greenyellow;
+    background: white;
+  }
+  
+::selection {
+    color: greenyellow;
+    background: white;
+}
+
+/* Header */
+.nav-sec.scrolled {
+    margin: 0px;
+    height: 80px;
+    background: rgba(26, 26, 61, 0.9);
+    box-shadow: 0px 5px 25px rgba(1 1 1 / 55%);
+}
+
+.nav-sec {
+    margin: 50px 0;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.navigation {
+    display: flex;
+    gap: 15px;
+    margin-left: 50px;
+}
+
+.navigation li {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+}
+
+.navigation li a {
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 600;
+}
+
+.navigation li::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #0143D7;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.navigation li:hover:after,
+.navigation li.active::after {
+    width: 100%;
+} 
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a i {
+    color: white;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+}
+
+.social-links a i:hover {
+    scale: 1.3;
+    color: #0143D7;
+}
+
+/*main section*/
+.main-sec {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/uyfydu5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 55%);
+    padding: 20px;
+}
+.main-sec span {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    color: white;
+    text-align: center;
+}
+.main-sec h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: yellowgreen;
+    text-align: center;
+}
+.main-sec div {
+    display: flex;
+    gap: 20px;
+}
+.main-sec div a {
+    margin-top: 15px;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    border: 3px solid white;
+    padding: 8px 15px;
+    background: white;
+    color: #0143D7;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.main-sec div .cv-btn{
+    background-color: #0143D7; 
+    color: white; 
+    border-color: #0143D7;
+}
+.main-sec div a:hover {
+    background-color: #0143D7;
+    color: white;
+    scale: 1.1;
+}
+
+
+/* About Section */
+.about-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    min-height: 100vh;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.55);
+}
+
+.about-sec .about-content {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+} 
+
+.about-sec .about-content .card {
+    padding-top: 20px;
+}
+
+.about-sec .about-content h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    color: #0143D7;
+    font-weight: 600;
+}
+
+.about-sec .about-content span {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.about-sec .career-content h2 {
+    
+    /*The CSS clamp() function is used to set a value that 
+    will adjust responsively between a minimum value and 
+    a maximum value depending on the size of the viewport.*/
+    /*
+        clamp(min, preferred, max)
+    */
+
+    font-size: clamp(1.6rem, 4vw, 2rem); 
+    color: #0143D7;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.about-sec .career-content .list-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.about-sec .career-content .list-content .list-item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(26, 26, 61, 0.9);
+    gap: 5px;
+    box-shadow: 5px 5px 25px rgba(1, 1, 1, 0.35);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.about-sec .career-content .list-content .list-item i {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: white;
+}
+
+.about-sec .career-content .list-content .list-item li span {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.about-sec .career-content .list-content .list-item .time-line {
+    font-weight: 500;
+}
+
+.about-sec .career-content .list-content .list-item span {
+    padding: 8px 15px;
+    color: white;
+}
+
+/* Skills Section */
+.skills-sec {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: url(../images/uyfydu5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.skills-sec h2 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    color: #0143D7;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.skills-sec span {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-content {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-item span {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    color: white;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #0143D7;
+    transition: width 0.5s ease;
+}
+
+/* Projects Section */
+.project-sec {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/uyfydu5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.project-sec h2 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    color: #0143D7;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: rgba(26, 26, 61, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 5px 5px 25px rgba(1, 1, 1, 0.35);
+}
+
+.project-card:hover {
+    scale: 1.05;
+}
+
+.projects-content:hover .project-card:not(:hover) {
+    filter: blur(1px);
+}
+
+.project-card span:first-child {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    color: white;
+    font-weight: 600;
+}
+
+.project-card img,
+.project-card video {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-card span:last-child {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: white;
+}
+
+/* Contact Section */
+.contact-sec {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.55);
+}
+
+.contact-sec h2 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    color: #0143D7;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-sec span {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: black;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-info p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info i {
+    color: #0143D7;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.input-container {
+    position: relative;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-container input[type="text"],
+.input-container textarea {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-container textarea {
+    resize: none;
+    height: 100px;
+}
+
+.input-container .label,
+.input-container .label-area {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.input-container input[type="text"]:focus + .label,
+.input-container input[type="text"]:valid + .label,
+.input-container textarea:focus + .label-area,
+.input-container textarea:valid + .label-area {
+    top: -18px;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    color: #0143D7;
+}
+
+.input-container .underline,
+.input-container .underline-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #0143D7;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline,
+.input-container textarea:focus ~ .underline-area,
+.input-container textarea:valid ~ .underline-area {
+    transform: scaleX(1);
+}
+
+.contact-form button {
+    padding: 8px;
+    background: #0143D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: white;
+    color: #0143D7;
+}
+
+/* Go Top Button */
+#gotopbtn {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: #0143D7;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    z-index: 99;
+}
+
+#gotopbtn:hover {
+    opacity: 0.7;
+    scale: 1.1;
+}
+
+#btnMenu {
+    display: none;
+    color: white;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .nav-sec {
+        margin: 10px 0;
+        padding: 0 20px;
+    }
+
+    .navigation {
+        margin-left: 20px;
+        gap: 10px;
+    }
+
+    .main-sec {
+        padding: 15px;
+    }
+
+    .about-sec {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .skills-sec {
+        padding: 15px;
+    }
+
+    .project-sec {
+        padding: 15px;
+    }
+
+    .contact-sec {
+        padding: 15px;
+    }
+
+    .project-card {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 980px) {
+    .nav-sec {
+        justify-content: space-between;
+        padding: 0 15px;
+        height: 50px;
+    }
+
+    .nav-sec .nav-links {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(26, 26, 61, 0.95);
+        border-left: 1px solid #444444a8;
+        width: 200px;
+        height: 100vh;
+        text-align: center;
+        padding: 20px 0;
+        transition: right 0.3s ease;
+    }
+
+    .nav-sec .nav-links.active {
+        right: 0;
+    }
+
+    .nav-sec .nav-links .navigation {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .navigation li a {
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    #btnMenu {
+        display: block;
+    }
+
+    #btnMenu:hover {
+        opacity: 0.7;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+
+    .main-sec {
+        padding: 10px;
+    }
+
+    .main-sec h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .main-sec span {
+        font-size: clamp(1rem, 3.5vw, 1.3rem);
+    }
+
+    .main-sec div a {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        padding: 6px 12px;
+    }
+
+    .about-sec .about-content .card {
+        padding-top: 10px;
+    }
+
+    .project-card {
+        max-width: 300px;
+    }
+
+    .project-card img,
+    .project-card video {
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    .social-links a i {
+        font-size: clamp(1.2rem, 3vw, 1.4rem);
+    }
+
+    .main-sec {
+        padding: 10px;
+    }
+
+    .main-sec h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .main-sec span {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+
+    .about-sec {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .about-sec .about-content h1 {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    .about-sec .career-content h2 {
+        font-size: clamp(1.4rem, 3.5vw, 1.6rem);
+    }
+
+    .skills-sec h2 {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    .project-sec h2 {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    .contact-sec h2 {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    .input-container {
+        max-width: 300px;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .contact-content {
+        gap: 15px;
+    }
+
+    .contact-info p {
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-sec {
+        padding: 0 10px;
+        height: 45px;
+    }
+
+    .nav-sec .nav-links {
+        width: 160px;
+    }
+
+    .logo {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+    }
+
+    #btnMenu {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+    }
+
+    .social-links a i {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+    .main-sec {
+        padding: 8px;
+    }
+
+    .main-sec h1 {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+    }
+
+    .main-sec span {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+
+    .main-sec div a {
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+        padding: 5px 10px;
+    }
+
+    .about-sec {
+        padding: 8px;
+    }
+
+    .about-sec .about-content h1 {
+        font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    }
+
+    .about-sec .about-content span {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+
+    .about-sec .career-content h2 {
+        font-size: clamp(1.2rem, 3vw, 1.4rem);
+    }
+
+    .about-sec .career-content .list-content .list-item {
+        padding: 10px;
+    }
+
+    .skills-sec {
+        padding: 8px;
+    }
+
+    .skills-sec h2 {
+        font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    }
+
+    .skills-sec span {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+
+    .project-sec {
+        padding: 8px;
+    }
+
+    .project-sec h2 {
+        font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    }
+
+    .project-card img,
+    .project-card video {
+        height: 100px;
+    }
+
+    .project-card span:first-child {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .project-card span:last-child {
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+
+    .contact-sec {
+        padding: 8px;
+    }
+
+    .contact-sec h2 {
+        font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    }
+
+    .contact-sec span {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+
+    .input-container {
+        max-width: 100%;
+    }
+
+    .input-container input[type="text"],
+    .input-container textarea {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+
+    .input-container .label,
+    .input-container .label-area {
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+    }
+
+    .contact-form button {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+        padding: 6px;
+    }
+
+    #gotopbtn {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
