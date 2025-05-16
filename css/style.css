@@ -131,12 +131,14 @@
     color: yellowgreen;
     text-align: center;
     border-right: 5px solid;
-    width: 100%;
+    width: 0%;
     white-space: nowrap;
     overflow: hidden;
     animation: 
         typing 2s steps(13),
         cursor .4s step-end infinite alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
 }
 /* Cursor Blinking*/
 @keyframes cursor {
@@ -145,6 +147,9 @@
 /* Typing effect */
 @keyframes typing {
     from { width: 0}
+    to {
+        width: 100%
+    }
 }
 .main-sec div {
     display: flex;
