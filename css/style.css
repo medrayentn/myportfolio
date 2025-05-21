@@ -10,7 +10,9 @@
     text-decoration: none;
     list-style: none;
 }
-
+/* span{
+    color: white;
+} */
 ::-moz-selection { /* Code for Firefox */
     color: greenyellow;
     background: white;
@@ -146,7 +148,9 @@
 }
 /* Typing effect */
 @keyframes typing {
-    from { width: 0}
+    from { 
+        width: 0
+    }
     to {
         width: 100%
     }
@@ -164,11 +168,16 @@
     color: #0143D7;
     border-radius: 8px;
     font-weight: 600;
+    transition: .3s;
+}
+.main-sec div .view-btn{
+    transition: .3s;
 }
 .main-sec div .cv-btn{
     background-color: #0143D7; 
     color: white; 
     border-color: #0143D7;
+    transition: .3s;
 }
 .main-sec div a:hover {
     background-color: #0143D7;
@@ -390,9 +399,28 @@
     border-radius: 5px;
 }
 
-.project-card span:last-child {
+.project-card .description {
     font-size: clamp(0.9rem, 2.5vw, 1rem);
     color: white;
+}
+/* .project-card span:last-child {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: white;
+} */
+
+.project-card .live-demo{
+    align-self: flex-end;
+    font-size: clamp(0.7rem, 3vw, 1rem);
+    border: 3px solid white;
+    padding: 8px 15px;
+    background: white;
+    color: #0143D7;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.project-card .live-demo:hover{
+    background-color: #0143D7;
+    color: #fff;
 }
 
 /* Contact Section */

@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -40,8 +41,8 @@
         </div>
         <span>Based in Tunisia.</span>
         <div>
-          <a href="#project">View my projects</a>
-          <a href="monCV.pdf" download class="cv-btn">Download CV</a>
+          <a href="#project" class="view-btn" data-aos="zoom-in">View my projects</a>
+          <a href="monCV.pdf" download class="cv-btn" data-aos="zoom-in">Download CV</a>
         </div>
         
       </section>
@@ -153,24 +154,25 @@
             <video controls autoplay muted loop>
                 <source src="assets/ipset.mp4" type="video/mp4">
             </video>
-            <span>A fully responsive plateform for private institute, built using HTML, CSS, and JavaScript for Front-End & PHP and MySQL for Back-End .</span>
+            <span class="description">A fully responsive plateform for private institute, built using HTML, CSS, and JavaScript for Front-End & PHP and MySQL for Back-End .</span>
           </div>
           <div class="project-card">
             <span>A Landing page Solution</span>
             <video controls autoplay muted loop>
                 <source src="assets/FitBoost.mp4" type="video/mp4">
             </video>
-            <span>A fully responsive landing page about Fitness, developed with HTML, CSS and Bootstrap.</span>
+            <span class="description">A fully responsive landing page about Fitness, developed with HTML, CSS and Bootstrap.</span>
+            <a href="https://medrayentn.github.io/FitBoost-Nutrition/" class="live-demo">Live Demo</a>
           </div>
           <!-- <div class="project-card">
             <span>N/A</span>
             <img src="" alt="N/A">
-            <span>A dynamic blog application with user authentication and commenting features, developed with React.</span>
+            <span class="description">A dynamic blog application with user authentication and commenting features, developed with React.</span>
           </div> -->
           <div class="project-card">
             <span>N/A</span>
             <img src="" alt="N/A">
-            <span>A sleek and modern portfolio to showcase my work, built with HTML, CSS, and JavaScript.</span>
+            <span class="description">A sleek and modern portfolio to showcase my work, built with HTML, CSS, and JavaScript.</span>
           </div>
         </div>
       </section>
@@ -208,5 +210,9 @@
 
     <button id="gotopbtn" onclick="topFunction()"><i class="fa-solid fa-arrow-up"></i></button>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
