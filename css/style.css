@@ -903,3 +903,53 @@
     }
 }
 
+/* Notification for contact*/
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: clamp(70px, 15vw, 90px); /* Adjusts based on viewport, stays below header */
+    right: clamp(10px, 3vw, 20px); /* Responsive right margin */
+    background-color: #3cd65d;
+    color: white;
+    padding: clamp(10px, 2.5vw, 15px) clamp(15px, 3vw, 20px); /* Responsive padding */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 10px); /* Responsive gap */
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem); /* Adjusted for smaller screens */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.notification.error {
+    background-color: #db3d3d;
+}
+
+.notification i {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+@media (max-width: 768px) {
+
+    /* Notification */
+    .notification {
+        top: clamp(70px, 12vw, 120px); /* Closer to header on smaller screens */
+        right: clamp(8px, 2.5vw, 15px);
+        padding: clamp(8px, 2vw, 12px) clamp(12px, 2.5vw, 15px);
+        font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+        gap: clamp(6px, 1.5vw, 8px);
+    }
+}
+@media (max-width: 425px) {
+
+    /* Notification */
+    .notification {
+        top: clamp(90px, 15vw, 150px); /* Further adjusted for very small screens */
+        right: clamp(6px, 2vw, 10px);
+        padding: clamp(6px, 1.8vw, 10px) clamp(10px, 2vw, 12px);
+        font-size: clamp(0.5rem, 1.2vw, 0.7rem);
+        gap: clamp(5px, 1.2vw, 6px);
+    }
+}

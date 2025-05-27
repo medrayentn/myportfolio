@@ -9,9 +9,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+
+    <!-- EmailJS -->
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+        (function(){
+            emailjs.init({
+              publicKey: "lO0Z7rlDEm_J_6Wtu",
+            });
+        })();
+      </script>
+        </head>
+        <body>
 
     <header class="nav-sec">
         <div class="logo">
@@ -42,7 +55,7 @@
         <span>Based in Tunisia.</span>
         <div>
           <a href="#project" class="view-btn" data-aos="zoom-in">View my projects</a>
-          <a href="monCV.pdf" download class="cv-btn" data-aos="zoom-in">Download CV</a>
+          <a href="cv.pdf" download class="cv-btn" data-aos="zoom-in">Download CV</a>
         </div>
         
       </section>
@@ -125,21 +138,21 @@
             </div>
           </div>
           <div class="skill-item">
-            <span>React JS</span>
+            <span>React JS (Learning)</span>
             <div class="progress-bar">
-              <div class="progress" style="width: 11%;"></div>
+              <div class="progress" style="width: 25%;"></div>
             </div>
           </div>
           <div class="skill-item">
-            <span>Node JS</span>
+            <span>Node JS (Learning)</span>
             <div class="progress-bar">
-              <div class="progress" style="width: 7%;"></div>
+              <div class="progress" style="width: 12%;"></div>
             </div>
           </div>
           <div class="skill-item">
-            <span>MongoDB</span>
+            <span>MongoDB (Learning)</span>
             <div class="progress-bar">
-              <div class="progress" style="width: 9%;"></div>
+              <div class="progress" style="width: 22%;"></div>
             </div>
           </div>
         </div>
@@ -151,18 +164,18 @@
         <div class="projects-content">
           <div class="project-card">
             <span>Full-Stack Web Solution for Institute</span>
-            <video controls autoplay muted loop>
+            <video controls muted loop>
                 <source src="assets/ipset.mp4" type="video/mp4">
             </video>
             <span class="description">A fully responsive plateform for private institute, built using HTML, CSS, and JavaScript for Front-End & PHP and MySQL for Back-End .</span>
           </div>
           <div class="project-card">
             <span>A Landing page Solution</span>
-            <video controls autoplay muted loop>
+            <video controls muted loop>
                 <source src="assets/FitBoost.mp4" type="video/mp4">
             </video>
             <span class="description">A fully responsive landing page about Fitness, developed with HTML, CSS and Bootstrap.</span>
-            <a href="https://medrayentn.github.io/FitBoost-Nutrition/" class="live-demo">Live Demo</a>
+            <a href="https://medrayentn.github.io/FitBoost-Nutrition/" target="_blank" class="live-demo">Live Demo</a>
           </div>
           <!-- <div class="project-card">
             <span>N/A</span>
@@ -170,9 +183,10 @@
             <span class="description">A dynamic blog application with user authentication and commenting features, developed with React.</span>
           </div> -->
           <div class="project-card">
-            <span>N/A</span>
-            <img src="" alt="N/A">
-            <span class="description">A sleek and modern portfolio to showcase my work, built with HTML, CSS, and JavaScript.</span>
+            <span>Marketing Agency Website Revamp</span>
+            <img src="images/clickora.jpg" alt="clickora">
+            <span class="description">Improved an existing marketing agency website by enhancing functionalities and user experience.</span>
+            <a href="https://clickoraaa.github.io/clickora.agency/" target="_blank" class="live-demo">See More</a>
           </div>
         </div>
       </section>
@@ -185,31 +199,33 @@
             <p><i class="fa-solid fa-envelope"></i> medrayenelmi@gmail.com</p>
             <p><i class="fa-solid fa-phone"></i> +216 56 803 853</p>
           </div>
-            <form action="https://formsubmit.co/a8db2dc0a69f91ce8a4c6549878ba54a" 
-            method="POST"
-            class="contact-form">
+            <div class="contact-form">
                 <div class="input-container">
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" required
+              autocomplete="off">
                     <label for="name" class="label">Your Name</label>
                     <div class="underline"></div>
                 </div>
                 <div class="input-container">
-                    <input type="text" name="email" id="email" required>
+                    <input type="text" name="email" id="email" required
+              autocomplete="off">
                     <label for="email" class="label">Your Email</label>
                     <div class="underline"></div>
                 </div>
                 <div class="input-container">
-                    <textarea rows="6" name="message" id="message" required></textarea>
+                    <textarea rows="6" name="message" id="message" required
+              autocomplete="off"></textarea>
                     <label for="message" class="label-area">Your Message</label>
                     <div class="underline-area"></div>
                 </div>
-                  <button type="submit">Send Message</button>
-            </form>
+                  <button type="submit" onclick="Email()">Send Message</button>
+            </div>
         </div>
       </footer>
 
     <button id="gotopbtn" onclick="topFunction()"><i class="fa-solid fa-arrow-up"></i></button>
   </body>
+  <script src="js/email_js.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
   <script>
