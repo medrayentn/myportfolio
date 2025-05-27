@@ -489,6 +489,7 @@
 }
 
 .input-container input[type="text"],
+.input-container input[type="email"],
 .input-container textarea {
     font-size: clamp(1rem, 3vw, 1.2rem);
     width: 100%;
@@ -499,48 +500,21 @@
     outline: none;
 }
 
+.input-container input:not([type="radio"]):invalid:not(:placeholder-shown),
+.input-container textarea:invalid:not(:placeholder-shown) {
+    border-color: #f04343;
+}
+.input-container input:not([type="radio"]):valid:not(:placeholder-shown),
+.input-container textarea:valid:not(:placeholder-shown){
+    border-color: #43f068;
+ }
+.input-container input:not([type="radio"]):placeholder-shown {
+      border-color: #ccc;
+}
+
 .input-container textarea {
     resize: none;
     height: 100px;
-}
-
-.input-container .label,
-.input-container .label-area {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    color: #ccc;
-    transition: all 0.3s ease;
-    pointer-events: none;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-}
-
-.input-container input[type="text"]:focus + .label,
-.input-container input[type="text"]:valid + .label,
-.input-container textarea:focus + .label-area,
-.input-container textarea:valid + .label-area {
-    top: -18px;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
-    color: #0143D7;
-}
-
-.input-container .underline,
-.input-container .underline-area {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #0143D7;
-    transform: scaleX(0);
-    transition: all 0.3s ease;
-}
-
-.input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline,
-.input-container textarea:focus ~ .underline-area,
-.input-container textarea:valid ~ .underline-area {
-    transform: scaleX(1);
 }
 
 .contact-form button {
@@ -879,6 +853,7 @@
     }
 
     .input-container input[type="text"],
+    .input-container input[type="email"],
     .input-container textarea {
         font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     }
