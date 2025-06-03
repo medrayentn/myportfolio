@@ -1,16 +1,31 @@
 function Email() {
     let emailsParms = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value,
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        message: document.getElementById('message').value.trim(),
     };
 
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    // Check if name is empty
+    if (!emailsParms.name) {
+        const errorNotification = document.createElement('div');
+        errorNotification.className = 'notification error';
+        errorNotification.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please enter your name.';
+        document.body.appendChild(errorNotification);
+
+        setTimeout(() => {
+            errorNotification.style.opacity = '0';
+            setTimeout(() => {
+                errorNotification.remove();
+            }, 500);
+        }, 3000);
+        return; // Stop execution if name is empty
+    }
+
     // Check if email is valid
     if (!emailRegex.test(emailsParms.email)) {
-        // Show error notification for invalid email
         const errorNotification = document.createElement('div');
         errorNotification.className = 'notification error';
         errorNotification.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please enter a valid email address.';
@@ -23,6 +38,22 @@ function Email() {
             }, 500);
         }, 3000);
         return; // Stop execution if email is invalid
+    }
+
+    // Check if message is empty
+    if (!emailsParms.message) {
+        const errorNotification = document.createElement('div');
+        errorNotification.className = 'notification error';
+        errorNotification.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please enter a message.';
+        document.body.appendChild(errorNotification);
+
+        setTimeout(() => {
+            errorNotification.style.opacity = '0';
+            setTimeout(() => {
+                errorNotification.remove();
+            }, 500);
+        }, 3000);
+        return; // Stop execution if message is empty
     }
 
     const service_ID = 'service_t04w3im';
