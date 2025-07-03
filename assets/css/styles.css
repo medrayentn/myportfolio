@@ -317,19 +317,9 @@ img {
   height: 0.25rem;
   border-radius: 0.5rem;
   z-index: var(--z-back);
+  width: 100%;
 }
-.skills__html__css {
-  width: 80%;
-}
-.skills__js {
-  width: 65%;
-}
-.skills__php__sql {
-  width: 70%;
-}
-.skills__mern {
-  width: 20%;
-}
+
 .skills__img {
   border-radius: 0.5rem;
 }
