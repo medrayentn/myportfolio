@@ -1,240 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Favicon -->
-         <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png" />
 
-        <!-- EmailJS -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script type="text/javascript">
-            (function () {
-                emailjs.init({
-                    publicKey: "lO0Z7rlDEm_J_6Wtu",
-                });
-            })();
-        </script>
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <title>Rayen | My Portfolio</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Rayen</a>
-                </div>
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "lO0Z7rlDEm_J_6Wtu",
+            });
+        })();
+    </script>
+
+    <title>Rayen | My Portfolio</title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Rayen</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link"
+                            data-translate="nav-home">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link" data-translate="nav-about">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link"
+                            data-translate="nav-services">Services</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link" data-translate="nav-skills">Skills</a>
+                    </li>
+                    <li class="nav__item"><a href="#work" class="nav__link" data-translate="nav-projects">Projects</a>
+                    </li>
+                    <li class="nav__item"><a href="#contact" class="nav__link" data-translate="nav-contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="language-selector" id="language-selector">
+                    <div class="language-toggle">
+                        <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/flags/4x3/gb.svg" alt="UK Flag"
+                            class="flag-icon">
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <ul class="language-options">
+                        <li class="language-option" data-lang="en">
+                            <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/flags/4x3/gb.svg" alt="UK Flag"
+                                class="flag-icon">
+                        </li>
+                        <li class="language-option" data-lang="fr">
+                            <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/flags/4x3/fr.svg"
+                                alt="French Flag" class="flag-icon">
+                        </li>
                     </ul>
                 </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Rayen</span><br> Web Developer</h1>
-                    <div class="home___btnLinks">
-                        <a href="#contact" class="button">Contact</a>
-                        <a href="assets/files/cv.pdf" download class="button">My CV</a>
-                    </div>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/mohamed-rayen-elmi-73a070353" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=10008929459029" class="home__social-icon"><i class='fa-brands fa-facebook' ></i></a>
-                    <a href="https://www.instagram.com/mohamedrayen_" class="home__social-icon"><i class='fa-brands fa-instagram' ></i></a>
-                    <a href="https://github.com/medrayentn" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.png" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Mohamed Rayen Elmi</h2>
-                        <p class="about__text">I am passionate about learning new approaches and 
-                            am always on the lookout for efficient workflows.
-                             I'm an expert in creating responsive sites, landing pages,
-                              personal portfolios, and complex websites. Ever eager to 
-                              grow and take on new challenges, I'm currently working at 
-                              Clickora Agency, where I collaborate with real clients to 
-                              turn ideas into functional, well-crafted websites. 
-                              I'm continually striving to improve my skills and stay 
-                              up to date with the latest in web development.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Professional Skills</h2>
-                        <p class="skills__text">These levels reflect my current experience and comfort with each technology, based on personal projects, hands-on learning, and ongoing development.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">HTML5 | CSS3</span>
-                            </div>
-                            <div class="skills__bar">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">Advanced</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-php skills__icon "></i>
-                                <i class="fa-solid fa-database skills__icon "></i>
-                                <span class="skills__name">PHP | MySQL</span>
-                            </div>
-                            <div class="skills__bar">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class="fa-brands fa-react skills__icon "></i>
-                                <i class="fa-brands fa-node skills__icon "></i>
-                                <i class="fa-solid fa-database skills__icon "></i>
-                                <span class="skills__name">MERN Stack</span>
-                            </div>
-                            <div class="skills__bar">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">Learning</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work0.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Projects</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="https://medrayentn.github.io/FitBoost-Nutrition/" target="_blank" class="work__img">
-                        <img src="assets/img/project1.png" alt="">
-                    </a>
-                    <a href="https://clickoraaa.github.io/clickora.agency/" target="_blank" class="work__img">
-                        <img src="assets/img/project2_dark.png" alt="">
-                    </a>
-                    <a href="https://medrayentn.github.io/ipset.tn/" target="_blank" class="work__img">
-                        <img src="assets/img/project3.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="contact__input">
-                        <input type="email" name="email" id="email" required placeholder="Your Email" class="contact__input">
-                        <textarea name="message" id="message" placeholder="Your Message" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" onclick="Email()" value="Send" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Rayen</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=100089294590295" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/mohamedrayen_" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/medrayentn" class="footer__icon"><i class="fa-brands fa-github"></i></a>
             </div>
-            <p class="footer__copy">&#169; Rayen. All rigths reserved</p>
-        </footer>
 
-        <!--===== Go Top Button =====-->
-        <button id="goTop__btn" class="goTop__button" onclick="topFunction()">
-            <i class="fa-solid fa-arrow-up"></i>
-        </button>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title" data-translate="home-title">Hi,<br>I'am <span
+                        class="home__title-color">Rayen</span><br> Web Developer</h1>
+                <div class="home___btnLinks">
+                    <a href="#contact" class="button" data-translate="home-contact-btn">Contact</a>
+                    <a href="assets/files/cv.pdf" download class="button" data-translate="home-cv-btn">My CV</a>
+                </div>
+            </div>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/goTop.js"></script>
-        <script src="assets/js/email_js.js"></script>
-    </body>
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/mohamed-rayen-elmi-73a070353" class="home__social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=10008929459029" class="home__social-icon"><i
+                        class='fa-brands fa-facebook'></i></a>
+                <a href="https://www.instagram.com/mohamedrayen_" class="home__social-icon"><i
+                        class='fa-brands fa-instagram'></i></a>
+                <a href="https://github.com/medrayentn" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title" data-translate="about-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/about.png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle" data-translate="about-name">I'am Mohamed Rayen Elmi</h2>
+                    <p class="about__text" data-translate="about-text">I am passionate about learning new approaches and
+                        am always on the lookout for efficient workflows.
+                        I'm an expert in creating responsive sites, landing pages,
+                        personal portfolios, and complex websites. Ever eager to
+                        grow and take on new challenges, I'm currently working at
+                        Clickora Agency, where I collaborate with real clients to
+                        turn ideas into functional, well-crafted websites.
+                        I'm continually striving to improve my skills and stay
+                        up to date with the latest in web development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SERVICES =====-->
+        <section class="services section" id="services">
+            <h2 class="section-title" data-translate="services-title">Services</h2>
+            <div class="services__container bd-grid">
+                <div class="services__card">
+                    <div class="services__icon-wrapper">
+                        <i class="bx bx-rocket"></i>
+                    </div>
+                    <h3 class="services__title" data-translate="service-landing-title">Landing Page</h3>
+                    <p class="services__description" data-translate="service-landing-desc">Craft high-converting landing
+                        pages with stunning visuals and
+                        optimized user flows to boost engagement and leads.</p>
+                </div>
+                <div class="services__card">
+                    <div class="services__icon-wrapper">
+                        <i class="bx bx-store"></i>
+                    </div>
+                    <h3 class="services__title" data-translate="service-showcase-title">Showcase Website</h3>
+                    <p class="services__description" data-translate="service-showcase-desc">Showcase your brand with a
+                        sleek, responsive website designed to highlight your products or services.</p>
+                </div>
+                <div class="services__card">
+                    <div class="services__icon-wrapper">
+                        <i class="bx bx-cart"></i>
+                    </div>
+                    <h3 class="services__title" data-translate="service-ecommerce-title">E-commerce</h3>
+                    <p class="services__description" data-translate="service-ecommerce-desc">Build seamless e-commerce
+                        websites with secure payments and intuitive product management for an exceptional shopping
+                        experience.</p>
+                </div>
+                <div class="services__card">
+                    <div class="services__icon-wrapper">
+                        <i class="bx bx-code-alt"></i>
+                    </div>
+                    <h3 class="services__title" data-translate="service-webapp-title">Web App</h3>
+                    <p class="services__description" data-translate="service-webapp-desc">Develop dynamic, scalable web
+                        apps with custom features tailored to
+                        your business goals and user needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title" data-translate="skills-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle" data-translate="skills-subtitle">Professional Skills</h2>
+                    <p class="skills__text" data-translate="skills-text">These levels reflect my current experience and
+                        comfort with each technology,
+                        based on personal projects, hands-on learning, and ongoing development.</p>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-html5 skills__icon'></i>
+                            <i class='bx bxl-css3 skills__icon'></i>
+                            <span class="skills__name" data-translate="skill-html-css">HTML5 | CSS3</span>
+                        </div>
+                        <div class="skills__bar">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage" data-translate="skill-html-css-level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-javascript skills__icon'></i>
+                            <span class="skills__name" data-translate="skill-js">JAVASCRIPT</span>
+                        </div>
+                        <div class="skills__bar">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage" data-translate="skill-js-level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fa-brands fa-php skills__icon "></i>
+                            <i class="fa-solid fa-database skills__icon "></i>
+                            <span class="skills__name" data-translate="skill-php-mysql">PHP | MySQL</span>
+                        </div>
+                        <div class="skills__bar">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage" data-translate="skill-php-mysql-level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fa-brands fa-react skills__icon "></i>
+                            <i class="fa-brands fa-node skills__icon "></i>
+                            <span class="skills__name" data-translate="skill-mern">MERN Stack</span>
+                        </div>
+                        <div class="skills__bar">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage" data-translate="skill-mern-level">Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="assets/img/work0.jpg" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title" data-translate="projects-title">Projects</h2>
+
+            <div class="work__container bd-grid">
+                <a href="https://medrayentn.github.io/FitBoost-Nutrition/" target="_blank" class="work__img">
+                    <img src="assets/img/project1.png" alt="">
+                </a>
+                <a href="https://clickoraaa.github.io/clickora.agency/" target="_blank" class="work__img">
+                    <img src="assets/img/project2_dark.png" alt="">
+                </a>
+                <a href="https://medrayentn.github.io/ipset.tn/" target="_blank" class="work__img">
+                    <img src="assets/img/project3.png" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work4.jpg" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work5.jpg" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/work6.jpg" alt="">
+                </a>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title" data-translate="contact-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required class="contact__input"
+                        data-translate="input-name">
+                    <input type="email" name="email" id="email" required placeholder="Your Email" class="contact__input"
+                        data-translate="input-email">
+                    <textarea name="message" id="message" placeholder="Your Message" cols="0" rows="10"
+                        class="contact__input" data-translate="input-message"></textarea>
+                    <input type="button" onclick="Email()" value="Send" class="contact__button button"
+                        data-translate="contact-button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title" data-translate="footer-title">Rayen</p>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/profile.php?id=100089294590295" class="footer__icon"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/mohamedrayen_" class="footer__icon"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/medrayentn" class="footer__icon"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p class="footer__copy" data-translate="footer-copy">&#169; Rayen. All rigths reserved</p>
+    </footer>
+
+    <!--===== Go Top Button =====-->
+    <button id="goTop__btn" class="goTop__button" onclick="topFunction()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/goTop.js"></script>
+    <script src="assets/js/email_js.js"></script>
+</body>
+
 </html>
