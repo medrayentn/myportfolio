@@ -55,3 +55,30 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text, .services
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 });
 sr.reveal('.home__social-icon', { interval: 200 });
 sr.reveal('.skills__data, .work__img, .contact__input, .services__card', { interval: 200 });
+
+
+/* Magnific Popup Initialization */
+$(document).ready(function() {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a:not(.no-popup)', // Only target <a> tags without no-popup class
+        // delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: false,
+            // navigateByImgClick: true,
+            // preload: [0,1]
+        },
+        image: {
+            titleSrc: function(item) {
+                return item.el.find('img').attr('alt');
+            }
+        },
+        zoom: {
+            enabled: true,
+            duration: 300,
+            opener: function(element) {
+                return element.find('img');
+            }
+        }
+    });
+});

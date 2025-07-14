@@ -751,3 +751,45 @@ img {
     width: 450px;
   }
 }
+
+/* Magnific Popup Custom Styles */
+.mfp-zoom-in {
+    /* start of zooming animation */
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.mfp-zoom-in.mfp-ready {
+    opacity: 1;
+    transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.m.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing {
+    transform: scale(0.8);
+    opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.mfp-img {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+}
+.mfp-close {
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+.mfp-close:hover {
+    opacity: 1;
+    color: var(--first-color);
+}
